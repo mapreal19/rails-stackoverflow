@@ -1,8 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'faker'
-gem 'byebug'
 gem 'draper', '~> 1.3'
+
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
