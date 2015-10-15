@@ -9,6 +9,8 @@ gem 'pry-rails'
 gem 'awesome_print'
 gem 'hirb'
 
+gem 'blorgh', path: 'engines/blorgh'
+
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 source 'https://rails-assets.org' do

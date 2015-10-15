@@ -6,6 +6,12 @@ GIT
       autoprefixer-rails (>= 5.2.1.3)
       sass (>= 3.4.18)
 
+PATH
+  remote: engines/blorgh
+  specs:
+    blorgh (0.0.1)
+      rails (~> 4.2.4)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -178,6 +184,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  blorgh!
   bootstrap!
   byebug
   coffee-rails (~> 4.1.0)
