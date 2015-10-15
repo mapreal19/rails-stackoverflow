@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'users#index'
   resources :users
+
+  mount Blorgh::Engine, at: '/blog', as: 'blog_engine'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
