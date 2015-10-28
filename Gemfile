@@ -4,6 +4,7 @@ ruby "2.2.3"
 gem 'faker'
 gem 'draper', '~> 1.3'
 gem 'squeel'
+gem 'migration_data'
 gem 'pry-rails'
 
 gem 'awesome_print'
