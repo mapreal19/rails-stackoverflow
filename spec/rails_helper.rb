@@ -10,6 +10,34 @@ require 'rspec/rails'
 require 'capybara/rspec'
 
 Capybara.default_driver = :selenium_chrome_headless
+Capybara.javascript_driver = :selenium_chrome_billy
+
+Billy.configure do |c|
+  c.cache = true
+  c.cache_request_headers = false
+  c.ignore_params = ["http://www.google-analytics.com/__utm.gif",
+                     "https://r.twimg.com/jot",
+                     "http://p.twitter.com/t.gif",
+                     "http://p.twitter.com/f.gif",
+                     "http://www.facebook.com/plugins/like.php",
+                     "https://www.facebook.com/dialog/oauth",
+                     "http://cdn.api.twitter.com/1/urls/count.json"]
+  c.path_blacklist = []
+  c.merge_cached_responses_whitelist = []
+  c.persist_cache = true
+  c.ignore_cache_port = true # defaults to true
+  c.non_successful_cache_disabled = false
+  c.non_successful_error_level = :warn
+  c.non_whitelisted_requests_disabled = false
+  c.cache_path = 'spec/req_cache/'
+  c.certs_path = 'spec/req_certs/'
+  # c.proxy_host = 'example.com' # defaults to localhost
+  # c.proxy_port = 12345 # defaults to random
+  c.proxied_request_host = nil
+  c.proxied_request_port = 80
+  c.record_requests = true # defaults to false
+  c.cache_request_body_methods = ['get', 'post', 'patch', 'put'] # defaults to ['post']
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
